@@ -6,6 +6,9 @@
     @csrf
     <button type="submit">Crear producto de prueba</button>
 </form>
+<a href="{{ route('productos.stock-alto') }}" class="btn btn-success mb-3">
+    Ver productos con stock > 5
+</a>
 
 <table border="1" cellpadding="6">
     <tr>
