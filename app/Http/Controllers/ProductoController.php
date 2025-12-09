@@ -35,4 +35,12 @@ class ProductoController extends Controller
 
         return redirect()->route('productos.index');
     }
+    public function stockAlto()
+{
+    // Traer productos con stock mayor a 5
+    $productos = Producto::where('stock', '>', 5)->get();
+
+    // Retornar vista con los productos filtrados
+    return view('productos.stock-alto', compact('productos'));
+}
 }
